@@ -1,0 +1,7 @@
+Challenges
+
+1. Changes were not getting committed - Commit Staged in VS was disabled
+
+Solution - We needed to install GIT for Windows - which added it to PATH using which VS looks it up.
+This step in the setup should be checked - ✔ Git from the command line and also from 3rd-party software
+
