@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/flow-track-app/FileContentIndex/4dc727e6-c8a1-4785-acd0-c839fc5e0b30.vsidx
+/FlowTrack/.vs/FlowTrack/FileContentIndex
+/.vs
+/FlowTrack/.vs/FlowTrack/v17
+/FlowTrack/FlowTrack.Domain/obj
