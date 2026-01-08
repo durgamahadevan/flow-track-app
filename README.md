@@ -18,10 +18,25 @@ We are aiming to keep the architecture future proof.
 
 
 # High-level architecture
-User-Tenants-Roles-Policies governed by license
-Tasks have fixed and customizable fields - setting which should be mandatory
-Tasks transition through States (Customizable - create your own workflow, define Done-Done)
-Tasks have the ability to record text, image, code blocks etc
-Some users have permission to bulk edit tasks
+
+• User-Tenants-Roles-Policies governed by license.
+
+• Projects have tasks in a hierarchy
+
+• Tasks have various types - Feature, Story, Bug, Spike etc 
+	with each mandating some fields and having some hierarchy/relationship with each other
+
+• Tasks have fixed and customizable fields - setting which should be mandatory
+
+• Tasks transition through States (Customizable - create your own workflow, define Done-Done)
+
+• Tasks have the ability to record text, image, code blocks etc
+
+• Some users have special permissions like - 
+	• to bulk edit tasks
+	• to view tasks across various projects 
+	• to create/delete tasks
+	• readonly mode for audit purpose
+	• primitive querying abilities.
 
 
