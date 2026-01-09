@@ -1,42 +1,71 @@
 # flow-track-app
-An attempt at real world application from scratch
+A domain-driven, multi-tenant work management platform built from scratch to explore real-world backend and frontend architecture.
+
 
 # Vision
-To learn as much as possible intentionally from this project implementation about e2e aspects of a real-world application.
-To become more confident on the performance of my job.
-To become more risk-taking and make myself confortable with experimentation.
-
-# Problem statement
-FlowTrack is a hybrid work management platform offering both individual and organization-level capabilities. 
-The system is designed with explicit tenant isolation, license-aware authorization, customizable and auditability as 
-first-class concerns.
-FlowTrack focuses on user experience and intuitive design.
-We are aiming to keep the architecture future proof.
+FlowTrack aims to be a flexible, multi-tenant work and operations management platform that supports both individual users and licensed organizations, with a strong focus on auditability, security, and extensibility.
 
 
-# Non-goals
+## Learning Goals
+This project is intentionally designed to:
+- Explore end-to-end system design and implementation
+- Build confidence in architectural and performance-related decisions
+- Practice risk-taking through experimentation and refactoring
+- Simulate real-world constraints not always encountered in day-to-day work
 
 
-# High-level architecture
+## Problem Statement
+FlowTrack is a hybrid work management platform offering limited public functionality for individual users and advanced, license-based capabilities for organizations.
 
-• User-Tenants-Roles-Policies governed by license.
+The system is designed with:
+- Explicit tenant isolation
+- License-aware authorization
+- Customizable workflows
+- Strong auditability
 
-• Projects have tasks in a hierarchy
+The platform prioritizes clear domain boundaries and predictable APIs, enabling future evolution without forcing early architectural complexity.
 
-• Tasks have various types - Feature, Story, Bug, Spike etc 
-	with each mandating some fields and having some hierarchy/relationship with each other
 
-• Tasks have fixed and customizable fields - setting which should be mandatory
 
-• Tasks transition through States (Customizable - create your own workflow, define Done-Done)
+## Non-Goals
+- Building a microservices architecture in the initial versions
+- Supporting mobile clients
+- Implementing external identity providers (SSO, OAuth)
+- Optimizing for extreme scale or high availability early
+- Providing real-time collaboration features
 
-• Tasks have the ability to record text, image, code blocks etc
 
-• Some users have special permissions like - 
-	• to bulk edit tasks
-	• to view tasks across various projects 
-	• to create/delete tasks
-	• readonly mode for audit purpose
-	• primitive querying abilities.
+
+## High-Level Architecture
+
+FlowTrack follows a layered architecture with clear separation of concerns:
+
+- Domain layer contains core business entities and rules
+- Application layer orchestrates use cases and authorization decisions
+- Infrastructure layer handles persistence, authentication, and external concerns
+- API layer exposes HTTP endpoints and request handling
+
+Key architectural principles:
+- Tenant isolation enforced at the data and application layers
+- Authorization decisions depend on user roles and tenant license capabilities
+- Business rules live outside controllers and infrastructure code
+
+
+
+## Core Capabilities (Planned)
+
+- User, tenant, role, and policy management governed by license
+- Projects containing hierarchical tasks
+- Multiple task types (Feature, Bug, Story, Spike)
+- Fixed and customizable task fields
+- Custom workflows with configurable states
+- Rich task content (text, images, code blocks)
+- Permission-based access:
+  - Bulk edits
+  - Cross-project views
+  - Read-only audit access
+  - Basic querying
+
+
 
 
