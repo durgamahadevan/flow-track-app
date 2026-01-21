@@ -7,3 +7,5 @@
 /.vs
 /FlowTrack/.vs/FlowTrack/v17
 /FlowTrack/FlowTrack.Domain/obj
+/FlowTrack/.vs
+/FlowTrack/FlowTrack.Domain/bin/Debug/net8.0
